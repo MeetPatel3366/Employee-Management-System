@@ -7,17 +7,41 @@ import { AuthContext } from './context/AuthProvider'
 
 const App = () => {
   const [user,setUser]=useState(null)
+  const [loggedInUserData,setLoggedInUserData]=useState(null)
+
+  const authData=useContext(AuthContext)
+
+  useEffect(()=>{
+    const loggedInUser=localStorage.getItem('loggedInUser')
+
+    if(loggedInUser)
+    {
+      const userData=JSON.parse(loggedInUser)
+      console.log(userData);  
+      setUser(userData.role)
+      setLoggedInUserData(userData.data)
+      
+    }
+    
+  },[])
 
   const handleLogin=(email,password)=>{
     if(email=='admin@me.com' && password=='123')
     {
       setUser('admin')
-      console.log(user);
+      localStorage.setItem('loggedInUser',JSON.stringify({role:'admin'}))
+      console.log("user:",user);
       console.log("This is Admin");      
     }
-    else if(email=='user@me.com' && password=='123')
+    else if(authData)
     {
-      setUser('employee')
+      const employee=authData.employees.find((e)=>email==e.email && password==e.password)
+      if(employee)
+      {
+        setUser('employee')
+      }
+      setLoggedInUserData(employee)
+      localStorage.setItem('loggedInUser',JSON.stringify({role:'employee',data:{employee}}))
       console.log("This is User"); 
       console.log(user);
     }
@@ -27,13 +51,12 @@ const App = () => {
     }
   }
 
-  const data=useContext(AuthContext)
-  console.log(data);
+  
   
   return (
     <>
       {!user ? <Login handleLogin={handleLogin} /> : ''}
-      {user=="admin" ? <AdminDashboard/> : <EmployeeDashboard/>}
+      {user=="admin" ? <AdminDashboard/> : (user=='employee'? <EmployeeDashboard data={loggedInUserData}/>:null) }
     </>
   )
 }
