@@ -2,7 +2,7 @@ const employees = [
   {
     id: 1,
     firstName: "Rajesh",
-    email: "employee1@example.com",
+    email: "1@emp.com",
     password: "123",
     taskCounts: {
       active: 2,
@@ -24,7 +24,7 @@ const employees = [
       {
         title: "Clean Station",
         description: "Ensure the counter and utensils are clean.",
-        date: "2025-01-10",
+        date: "2025-01-11",
         category: "Maintenance",
         active: true,
         newTask: true,
@@ -34,7 +34,7 @@ const employees = [
       {
         title: "Customer Order",
         description: "Handle order #1234 for Table 5.",
-        date: "2025-01-10",
+        date: "2025-01-12",
         category: "Service",
         active: false,
         newTask: false,
@@ -46,7 +46,7 @@ const employees = [
   {
     id: 2,
     firstName: "Suman",
-    email: "employee2@example.com",
+    email: "2@emp.com",
     password: "123",
     taskCounts: {
       active: 1,
@@ -58,7 +58,7 @@ const employees = [
       {
         title: "Prepare Ingredients",
         description: "Chop vegetables for the lunch service.",
-        date: "2025-01-10",
+        date: "2025-01-13",
         category: "Preparation",
         active: true,
         newTask: true,
@@ -68,7 +68,7 @@ const employees = [
       {
         title: "Train New Staff",
         description: "Guide the new kitchen helper on protocols.",
-        date: "2025-01-10",
+        date: "2025-01-14",
         category: "Training",
         active: false,
         newTask: false,
@@ -80,7 +80,7 @@ const employees = [
   {
     id: 3,
     firstName: "Priya",
-    email: "employee3@example.com",
+    email: "3@emp.com",
     password: "123",
     taskCounts: {
       active: 2,
@@ -92,7 +92,7 @@ const employees = [
       {
         title: "Equipment Check",
         description: "Test the functionality of the oven.",
-        date: "2025-01-10",
+        date: "2025-01-15",
         category: "Maintenance",
         active: true,
         newTask: false,
@@ -102,7 +102,7 @@ const employees = [
       {
         title: "Staff Briefing",
         description: "Attend the daily meeting with management.",
-        date: "2025-01-10",
+        date: "2025-01-16",
         category: "Meeting",
         active: true,
         newTask: false,
@@ -112,7 +112,7 @@ const employees = [
       {
         title: "Handle Complaint",
         description: "Address customer feedback about order #5678.",
-        date: "2025-01-10",
+        date: "2025-01-17",
         category: "Service",
         active: false,
         newTask: false,
@@ -124,7 +124,7 @@ const employees = [
   {
     id: 4,
     firstName: "Arjun",
-    email: "employee4@example.com",
+    email: "4@emp.com",
     password: "123",
     taskCounts: {
       active: 1,
@@ -136,7 +136,7 @@ const employees = [
       {
         title: "Prepare Order",
         description: "Package order #789 for delivery.",
-        date: "2025-01-10",
+        date: "2025-01-18",
         category: "Delivery",
         active: true,
         newTask: true,
@@ -146,7 +146,7 @@ const employees = [
       {
         title: "Inventory Update",
         description: "Log new inventory items into the system.",
-        date: "2025-01-10",
+        date: "2025-01-19",
         category: "Inventory",
         active: false,
         newTask: false,
@@ -158,7 +158,7 @@ const employees = [
   {
     id: 5,
     firstName: "Meena",
-    email: "employee5@example.com",
+    email: "5@emp.com",
     password: "123",
     taskCounts: {
       active: 2,
@@ -170,7 +170,7 @@ const employees = [
       {
         title: "Assist Chef",
         description: "Support the head chef during peak hours.",
-        date: "2025-01-10",
+        date: "2025-01-20",
         category: "Support",
         active: true,
         newTask: true,
@@ -180,7 +180,7 @@ const employees = [
       {
         title: "Clean Kitchen",
         description: "Deep clean the kitchen area after closing.",
-        date: "2025-01-10",
+        date: "2025-01-21",
         category: "Maintenance",
         active: false,
         newTask: false,
@@ -190,7 +190,7 @@ const employees = [
       {
         title: "Quality Check",
         description: "Inspect food quality before serving.",
-        date: "2025-01-10",
+        date: "2025-01-22",
         category: "Quality Assurance",
         active: true,
         newTask: true,
@@ -201,10 +201,11 @@ const employees = [
   },
 ];
 
+
 const admin = [
   {
     id: 1,
-    email: "admin@example.com",
+    email: "admin@me.com",
     password: "123",
   },
 ];
